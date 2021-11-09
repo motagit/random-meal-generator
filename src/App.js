@@ -19,7 +19,7 @@ function App() {
     }
   };
 
-  const getIngredients= () => {
+  const getIngredients = () => {
     var ingredientArray = [];
     if (isLoading == false) {
       for (var i = 1; i <= 20; i++) {
@@ -32,16 +32,26 @@ function App() {
     return (ingredientArray);
   }
 
+  const getInstructions = () => {
+    var instructionArray = [];
+    if (isLoading == false) {
+      if (data[0]['strInstructions'].match(/\n/g)) {
+        instructionArray = data[0]['strInstructions'].split();
+      }
+    }
+    return (instructionArray);
+  }
+
   return (
     <>
     <button onClick={() => getMeals()}>Click</button> 
     {isLoading == false ? 
       <div className="container">
         <h1>{data[0].strMeal}</h1>
-        <h3>Ingredients</h3>
-        <ul>{getIngredients()}</ul>
-        <h3>Instructions</h3>
-        <p>Instruction</p>
+          <h3>Ingredients</h3>
+            <ul>{getIngredients()}</ul>
+          <h3>Instructions</h3>
+            <p>{getInstructions()}</p>
         <img src={data[0].strMealThumb} alt="Food image" width="300" />
       </div>
     : null}
