@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import './App.scss';
 
 function App() {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  console.log(isLoading);
 
   const getMeals = async () => {
     try {
@@ -44,15 +46,21 @@ function App() {
 
   return (
     <>
-    <button onClick={() => getMeals()}>Click</button> 
+    <button class={isLoading == false ? "topButton" : "centeredButton"} id="mainButton" onClick={() => getMeals()}>get meal</button> 
     {isLoading == false ? 
       <div className="container">
-        <h1>{data[0].strMeal}</h1>
-          <h3>Ingredients</h3>
-            <ul>{getIngredients()}</ul>
-          <h3>Instructions</h3>
-            <p>{getInstructions()}</p>
-        <img src={data[0].strMealThumb} alt="Food image" width="300" />
+          <h1>{data[0].strMeal}</h1>
+          <div className="column">
+            <img id="image" src={data[0].strMealThumb} alt="Food image"/>
+            <div className="ingredients">
+              <h3>Ingredients</h3>
+                <ul>{getIngredients()}</ul>
+            </div>
+            </div>
+            <div className="instructions column">
+              <h3>Instructions</h3>
+              <p>{getInstructions()}</p>
+            </div>
       </div>
     : null}
     </>
