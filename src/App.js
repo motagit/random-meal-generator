@@ -46,7 +46,11 @@ function App() {
 
   return (
     <>
-    <button class={isLoading == false ? "topButton" : "centeredButton"} id="mainButton" onClick={() => getMeals()}>get meal</button> 
+    {isLoading == true ? <h1 className="mainTitle">It's cooking time!</h1> : null}
+    {isLoading == true ? <h2 className="subTitle">click in the button below to get a random recipe</h2> : null}
+    
+    
+    <button role="button" className={isLoading == false ? "topButton" : "centeredButton"} id="mainButton" onClick={() => getMeals()}>get meal 😋</button> 
     {isLoading == false ? 
       <div className="container">
           <h1>{data[0].strMeal}</h1>

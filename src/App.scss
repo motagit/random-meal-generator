@@ -1,3 +1,54 @@
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .column {
+    width: 268px;
+  }
+  .mainTitle {
+    font-size: 60px !important;
+  }
+  .subTitle {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 340px !important;
+  }
+
+  .column {
+    width: 100%;
+    margin: 0 0 60px 0 !important;
+    float: none;
+  }
+
+  .mainTitle {
+    font-size: 40px !important;
+    width: 90%;
+    top: 33% !important;
+  }
+  .subTitle {
+    font-size: 16px;
+  }
+}
+
+@font-face {
+  font-family: "CreatoDisplay-Regular";
+  src: url(./fonts/CreatoDisplay-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "CreatoDisplay-Black";
+  src: url(./fonts/CreatoDisplay-Black.otf) format("opentype");
+}
+
+$regular: CreatoDisplay-Regular;
+$black: CreatoDisplay-Black;
+$mainColor: #7c0a02;
+
+* {
+  font-family: $regular;
+}
+
 *,
 *:before,
 *:after {
@@ -10,8 +61,11 @@ p {
   white-space: pre-line;
 }
 
-.instructions h3 {
-  margin: 0 0 20px 0;
+@mixin mainPage {
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .container {
@@ -25,12 +79,25 @@ p {
 .column {
   width: 340px;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
-.instructions {
-  flex-grow: 1;
+.mainTitle {
+  width: 90%;
+  top: 30%;
+  left: 50%;
+  font-weight: normal;
+  font-family: $black;
+  font-size: 72px;
+  text-align: center;
+  @include mainPage;
+}
+.subTitle {
+  width: 60%;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  @include mainPage;
 }
 
 #image {
@@ -40,37 +107,36 @@ p {
 }
 
 #mainButton {
-  width: 100px;
-  height: 50px;
+  width: 145px;
+  height: 65px;
+  border: 1px solid darken($mainColor, 4%);
+  border-radius: 5px;
+  color: #fff;
+  background-color: $mainColor;
+  font-family: $black;
   font-size: 18px;
+  transition: background-color 150ms linear;
 }
+#mainButton:hover,
+#mainButton:active {
+  background: darken($mainColor, 7%);
+  transition: background-color 150ms linear;
+}
+
 .centeredButton {
-  margin: 0;
-  position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  @include mainPage;
 }
+
 .topButton {
   margin: 40px auto 0 auto;
   display: block;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .column {
-    width: 268px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .container {
-    width: 300px;
-  }
-
-  .column {
-    width: 100%;
-    margin: 0 0 60px 0;
-    float: none;
+.instructions {
+  flex-grow: 1;
+  h3 {
+    margin: 0 0 20px 0;
   }
 }
