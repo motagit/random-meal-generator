@@ -116,6 +116,7 @@ p {
   font-family: $black;
   font-size: 18px;
   transition: background-color 150ms linear;
+  cursor: pointer !important;
 }
 #mainButton:hover,
 #mainButton:active {
@@ -139,4 +140,8 @@ p {
   h3 {
     margin: 0 0 20px 0;
   }
+}
+
+.loading {
+  margin-top: 60px;
 }
