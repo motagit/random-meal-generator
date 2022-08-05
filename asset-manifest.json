@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/random-meal-generator/static/css/main.4f8c697f.chunk.css",
-    "main.js": "/random-meal-generator/static/js/main.30ebb730.chunk.js",
-    "main.js.map": "/random-meal-generator/static/js/main.30ebb730.chunk.js.map",
+    "main.css": "/random-meal-generator/static/css/main.e01499f2.chunk.css",
+    "main.js": "/random-meal-generator/static/js/main.d7fe50cd.chunk.js",
+    "main.js.map": "/random-meal-generator/static/js/main.d7fe50cd.chunk.js.map",
     "runtime-main.js": "/random-meal-generator/static/js/runtime-main.58c6dc41.js",
     "runtime-main.js.map": "/random-meal-generator/static/js/runtime-main.58c6dc41.js.map",
-    "static/js/2.1c28d602.chunk.js": "/random-meal-generator/static/js/2.1c28d602.chunk.js",
-    "static/js/2.1c28d602.chunk.js.map": "/random-meal-generator/static/js/2.1c28d602.chunk.js.map",
+    "static/js/2.8801d405.chunk.js": "/random-meal-generator/static/js/2.8801d405.chunk.js",
+    "static/js/2.8801d405.chunk.js.map": "/random-meal-generator/static/js/2.8801d405.chunk.js.map",
     "index.html": "/random-meal-generator/index.html",
-    "static/css/main.4f8c697f.chunk.css.map": "/random-meal-generator/static/css/main.4f8c697f.chunk.css.map",
-    "static/js/2.1c28d602.chunk.js.LICENSE.txt": "/random-meal-generator/static/js/2.1c28d602.chunk.js.LICENSE.txt",
+    "static/css/main.e01499f2.chunk.css.map": "/random-meal-generator/static/css/main.e01499f2.chunk.css.map",
+    "static/js/2.8801d405.chunk.js.LICENSE.txt": "/random-meal-generator/static/js/2.8801d405.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/random-meal-generator/static/media/CreatoDisplay-Regular.6d28723c.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.58c6dc41.js",
-    "static/js/2.1c28d602.chunk.js",
-    "static/css/main.4f8c697f.chunk.css",
-    "static/js/main.30ebb730.chunk.js"
+    "static/js/2.8801d405.chunk.js",
+    "static/css/main.e01499f2.chunk.css",
+    "static/js/main.d7fe50cd.chunk.js"
   ]
 }
